@@ -3,7 +3,7 @@
 _To use this project you will need to clone this repository or download it to your computer. If you choose to download it directly in the upper right part of the repository you will have the option, if it is not your case you can clone it using the following command._
 
 ```ssh
-  $ git clone https://github.com/romerojoseing/laravel-jetstream.git
+  $ git clone https://github.com/shimozuki/test_backend_inosoft.git
 ```
 
 <br>
@@ -15,15 +15,8 @@ _Follow this steps to run the framework, install dependencies necessaries._
 ```ssh
   $ composer install
 ```
-
 ```ssh
-  $ npm install && npm run dev
-```
-
-_Generate routes to storage and profile photos._
-
-```ssh
-  $ php artisan storage:link
+  $ php artisan key:generate
 ```
 
 _Migrate database_
