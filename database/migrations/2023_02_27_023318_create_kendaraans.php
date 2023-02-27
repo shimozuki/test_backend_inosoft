@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Kendaraan extends Migration
+class CreateKendaraans extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,13 @@ class Kendaraan extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('kendaraans', function (Blueprint $table) {
+            $table->id();
+            $table->integer('tahun_keluaran');
+            $table->string('warna');
+            $table->decimal('harga');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class Kendaraan extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('kendaraans');
     }
 }
