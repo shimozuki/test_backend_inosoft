@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Motor extends Migration
+class CreateMobils extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,13 @@ class Motor extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('mobils', function (Blueprint $table) {
+            $table->id();
+            $table->string('mesin');
+            $table->integer('kapasitas_penumpang');
+            $table->string('tipe');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class Motor extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('mobils');
     }
 }
